@@ -4,8 +4,8 @@ import java.util.Random;
  * A class to hold details of audio tracks.
  * Individual tracks may be played.
  * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author Willen leal
+ * @version 2018.07.10
  */
 public class MusicOrganizer
 {
@@ -127,7 +127,10 @@ public class MusicOrganizer
         }
     }
     
-    public void playRandom()
+    /**
+     * Play a random track in the collection, if ther is one.
+     */
+    public void playRandomTrack()
     {
         Random rnd = new Random();
         int index = rnd.nextInt(4);
