@@ -119,6 +119,10 @@ public class MusicOrganizer
         }
     }
     
+    
+    /**
+     * Play a random  playlist, if the collection has tracks.
+     */
     public void playRandomPlaylist()
     {
         Collections.shuffle(tracks);
