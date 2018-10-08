@@ -1,11 +1,13 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.concurrent.TimeUnit;
 
 /**
  * A class to hold details of audio tracks.
  * Individual tracks may be played.
  * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author Willen Leal
+ * @version 2018.07.10
  */
 public class MusicOrganizer
 {
@@ -114,6 +116,27 @@ public class MusicOrganizer
     {
         if(indexValid(index)) {
             tracks.remove(index);
+        }
+    }
+    
+    public void playRandomPlaylist()
+    {
+        Collections.shuffle(tracks);
+        
+        for(int i = 0; i < tracks.size(); i++)
+        {
+            if(tracks.size() > 0) {
+                player.startPlaying(tracks.get(i).getFilename());
+            }
+            
+            try {
+                 TimeUnit.SECONDS.sleep(133);
+            }
+            
+            catch(InterruptedException e){
+                System.out.print("Error!");
+            }
+                
         }
     }
     
