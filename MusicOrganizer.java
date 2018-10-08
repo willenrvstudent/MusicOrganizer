@@ -1,12 +1,20 @@
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
+=======
+import java.util.Random;
+>>>>>>> RandomSong
 /**
  * A class to hold details of audio tracks.
  * Individual tracks may be played.
  * 
+<<<<<<< HEAD
  * @author Willen Leal
+=======
+ * @author Willen leal
+>>>>>>> RandomSong
  * @version 2018.07.10
  */
 public class MusicOrganizer
@@ -153,6 +161,21 @@ public class MusicOrganizer
             player.startPlaying(tracks.get(0).getFilename());
         }
     }
+    
+    /**
+     * Play a random track in the collection, if ther is one.
+     */
+    public void playRandomTrack()
+    {
+        Random rnd = new Random();
+        int index = rnd.nextInt(4);
+        
+         if(tracks.size() > 0) {
+            player.startPlaying(tracks.get(index).getFilename());
+        }
+    
+    }
+   
     
     /**
      * Stop the player.
